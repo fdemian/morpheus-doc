@@ -15,7 +15,7 @@
   - database_password: the database password (default "").
   - serve_https : whether to use htpps or not. If set to true, you will need to specify the location of your SSL cert and key ( ssl_cert and ssl_key options) (default false).
   
- ## Run the application setup.
+ ### Run the application setup.
   
  ```
  python setup.py
@@ -23,23 +23,22 @@
  
  This step will install al required python packages (through pip), create the database with the name you chose on the previous step and run the migrations.
  
- ## Build the .js assets.
+ ### Create new users (if needed)
  
- Go to the frontend folder and build the javascript files.
+ You've now configured and installed the application, but it has no users. 
+ Users can be added through the modcp command. 
  
  ```
- webpack --config webpack.config.js --progress --colors
+ python modcp.py
  ```
  
- Or if you want the production build
-
- ```
- webpack --config webpack.prod.config.js --progress --colors
- ```
-  
- Go back to the top folder.
+ The program will ask you username, password, user name (the user's actual name) and an email address.
+ 
  
  ## Run Morpheus
+ 
+ Once you followed all the steps above, you're ready to go.
+ To run the applicationi, simply use the following command:
  
  ```
  python main.py
